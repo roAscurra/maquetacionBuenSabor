@@ -46,6 +46,14 @@
           </li>
           <hr>
           <li class="nav-item">
+            <a onclick="cargarComponente('OpcionesMenu/Estadisticas/estadisticas.html')"  class="nav-link">
+              <i class="bi bi-bar-chart"></i>              
+              <span data-feather="file"></span>
+              Estadisticas
+            </a>
+          </li>
+          <hr>
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-cart-check"></i>
               <span data-feather="file"></span>
@@ -58,15 +66,14 @@
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false" aria-controls="collapseExample">
+            <a onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')" class="nav-link" data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-tags"></i>
               <span data-feather="shopping-cart"></span>
               Marketing
             </a>
             <div class="collapse" id="marketing">
-              <a class="dropdown-item" href="#">Estadisticas</a>
-              <a class="dropdown-item" href="#">Cupones</a>
-              <a class="dropdown-item" href="#">Promociones</a>
+              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')">Cupones</a>
+              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Marketing/promociones.html')">Promociones</a>
             </div>
           </li>
           <hr>
