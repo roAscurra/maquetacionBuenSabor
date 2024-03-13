@@ -66,13 +66,13 @@
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#pedidos" aria-expanded="false" aria-controls="collapseExample">
+            <a class="nav-link" href="#" onclick="cargarComponente('OpcionesMenu/Pedidos/pedidos.html')" data-bs-toggle="collapse" data-bs-target="#pedidos" aria-expanded="false" aria-controls="collapseExample" >
               <span data-feather="users"></span>
               Pedidos
             </a>
             <div class="collapse" id="pedidos">
-              <a class="dropdown-item" href="#">Pendientes</a>
-              <a class="dropdown-item" href="#">Canceladas</a>
+              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Pedidos/pendientes.html')">Pendientes</a>
+              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Pedidos/cancelados.html')">Cancelados</a>
             </div>
           </li>
           <hr>
@@ -92,7 +92,7 @@
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center" id="contenedorComponentes">
         <h2>El Buen Sabor</h2>
       </div>
     </main>
@@ -101,5 +101,18 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function cargarComponente(url) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("contenedorComponentes").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+  }
+</script>
 </body>
 </html>
