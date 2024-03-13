@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <title>Lista de pedidos</title>
+    <style>
+        .promociones{
+            margin-top: 2%;
+        }
+        .table{
+            margin-top: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="promociones col-md-12">
+                <div class="contenedor row">
+                    <div class="col">
+                        <h2 class="titulo text-start">Promociones</h2>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary text-end rounded-pill" data-bs-toggle="modal" data-bs-target="#agregarPromocion"><i class="bi bi-plus-circle"></i> <span>Crear Promoción</span></button>
+                    </div>
+                </div>
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo/Precio</th>
+                        <th scope="col">Fecha de Vencimiento</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">Promo para compartit</th>
+                        <td>3x2</td>
+                        <td>2024-05-01</td>
+                        <td><span class="badge bg-success rounded-pill">Activo</span></td>
+                        <td>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                            <i class="bi bi-eye-slash"></i>                
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2 Lomos + Papas</th>
+                        <td>$10.500</td>
+                        <td>2024-05-20</td>
+                        <td><span class="badge bg-success rounded-pill">Activo</span></td>
+                        <td>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                            <i class="bi bi-eye-slash"></i>                
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2 Hamburguesas + Papas</th>
+                        <td>$9.500</td>
+                        <td>2024-05-20</td>
+                        <td><span class="badge bg-success rounded-pill">Activo</span></td>
+                        <td>
+                            <i class="bi bi-pencil-square"></i>
+                            <i class="bi bi-trash"></i>
+                            <i class="bi bi-eye-slash"></i>                
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="agregarPromocion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Crear promoción</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control rounded-pill" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Tipo/Precio:</label>
+                    <input class="form-control rounded-pill" id="message-text"></input>
+                </div>
+                <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Fecha de Vencimiento:</label>
+                    <input class="form-control rounded-pill" id="message-text"></input>
+                </div>
+                
+              </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-primary rounded-pill mx-auto">Agregar</button>
+            </div>            
+          </div>
+        </div>
+      </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
