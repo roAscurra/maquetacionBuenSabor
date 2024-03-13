@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de pendientes</title>
+</head>
+
+<body>
+    <style>
+        .pendientes {
+            width: 90%;
+            height: 100%;
+            overflow: auto;
+            margin-top: 20px;
+        }
+
+        .pendientes table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 3px solid rgb(142, 142, 142);
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .pendientes h2 {
+            font-size: 35px;
+            text-align: left;
+            margin: 20px;
+            margin-right: auto;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+
+        .contenedor button {
+            color: white;
+            background-color: blue;
+            border-radius: 20px;
+            border-color: blue;
+            height: 45px;
+            width: 150px;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+
+        .contenedor button:hover {
+            background-color: darkblue;
+            border-color: darkblue;
+        }
+    </style>
+
+    <div class="pendientes">
+        <div class="contenedor">
+            <h2 class="titulo">Pedidos Pendientes</h2>
+            <button class="button">Exportar lista</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Productos</th>
+                    <th>Estado del Pago</th>
+                    <th>Envío</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-03-16</td>
+                    <td>cliente3@example.com</td>
+                    <td>$150.00</td>
+                    <td>Lomo Completo, Papas Fritas</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>2024-03-12</td>
+                    <td>cliente5@example.com</td>
+                    <td>$100.00</td>
+                    <td>Hamburguesa Doble, Papas Fritas</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+
+                <tr>
+                    <td>2024-03-08</td>
+                    <td>cliente7@example.com</td>
+                    <td>$130.00</td>
+                    <td>Lomito, Gaseosa</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>2024-03-04</td>
+                    <td>cliente9@example.com</td>
+                    <td>$90.00</td>
+                    <td>Pizza Mediana</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

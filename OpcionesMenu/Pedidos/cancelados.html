@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de cancelados</title>
+</head>
+
+<body>
+    <style>
+        .cancelados {
+            width: 90%;
+            height: 100%;
+            overflow: auto;
+            margin-top: 20px;
+        }
+
+        .cancelados table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 3px solid rgb(142, 142, 142);
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .cancelados h2 {
+            font-size: 35px;
+            text-align: left;
+            margin: 20px;
+            margin-right: auto;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+
+        .contenedor button {
+            color: white;
+            background-color: blue;
+            border-radius: 20px;
+            border-color: blue;
+            height: 45px;
+            width: 150px;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+
+        .contenedor button:hover {
+            background-color: darkblue;
+            border-color: darkblue;
+        }
+    </style>
+
+    <div class="cancelados">
+        <div class="contenedor">
+            <h2 class="titulo">Pedidos Cancelados</h2>
+            <button class="button">Exportar lista</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Productos</th>
+                    <th>Motivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-03-12</td>
+                    <td>cliente1@email.com</td>
+                    <td>$45.00</td>
+                    <td>Pizza Margarita, Refresco</td>
+                    <td>Demora en la entrega</td>
+                </tr>
+                <tr>
+                    <td>2024-03-11</td>
+                    <td>cliente2@email.com</td>
+                    <td>$30.00</td>
+                    <td>Hamburguesa Doble, Papas Fritas</td>
+                    <td>Problema con el pago</td>
+                </tr>
+                <tr>
+                    <td>2024-03-10</td>
+                    <td>cliente3@email.com</td>
+                    <td>$20.00</td>
+                    <td>Lomo completo</td>
+                    <td>Cambio de opinión</td>
+                </tr>
+                <tr>
+                    <td>2024-03-09</td>
+                    <td>cliente4@email.com</td>
+                    <td>$18.00</td>
+                    <td>Empanadas Mixtas x6</td>
+                    <td>Artículo no disponible</td>
+                </tr>
+                <tr>
+                    <td>2024-03-08</td>
+                    <td>cliente5@email.com</td>
+                    <td>$50.00</td>
+                    <td>Pizza Especial, Aros de Cebolla</td>
+                    <td>Demora en la entrega</td>
+                </tr>
+                <tr>
+                    <td>2024-03-07</td>
+                    <td>cliente6@email.com</td>
+                    <td>$25.00</td>
+                    <td>Panchos x4, Gaseosa</td>
+                    <td>Error en la dirección de entrega</td>
+                </tr>
+                <tr>
+                    <td>2024-03-06</td>
+                    <td>cliente7@email.com</td>
+                    <td>$15.00</td>
+                    <td>Ensalada de Frutas, Yogur</td>
+                    <td>Cambio de opinión</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.tarjeta {
+    padding: 16px;
+    outline: 1px black solid;
+    border-radius: 10px;
+}
+
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono {
+    width: 24px;
+    height: 24px;
+}
