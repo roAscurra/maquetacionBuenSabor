@@ -12,60 +12,73 @@
       border-radius: 50%;
       margin-right: 10px;
     }
+    .row{
+      height: 100vh;
+    }
   </style>
 </head>
 <body>
 
 <div class="container-fluid">
-  <div class="row" style="height: 100vh;">
+  <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar h-100">
       <div class="sidebar-sticky">
         <br>
         <ul class="nav flex-column"> 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" width="32" height="32" class="rounded-circle me-2">
-                Usuario
+                <span>Usuario</span> 
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Modificar mis datos</a></li>
-              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-            </ul>
+            <div  class="collapse" id="collapseExample">
+              <a class="dropdown-item" href="#">Modificar mis datos</a>
+              <a class="dropdown-item" href="#">Cerrar sesión</a>
+            </div>
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false" aria-controls="collapseExample">
               <span data-feather="file"></span>
               Productos
             </a>
+            <div  class="collapse" id="productos">
+              <a class="dropdown-item" href="#">Lista de productos</a>
+              <a class="dropdown-item" href="#">Categorias</a>
+            </div>
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false" aria-controls="collapseExample">
               <span data-feather="shopping-cart"></span>
-              Promociones
+              Marketing
             </a>
+            <div class="collapse" id="marketing">
+              <a class="dropdown-item" href="#">Estadisticas</a>
+              <a class="dropdown-item" href="#">Cupones</a>
+              <a class="dropdown-item" href="#">Promociones</a>
+            </div>
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#pedidos" aria-expanded="false" aria-controls="collapseExample">
               <span data-feather="users"></span>
-              Mis pedidos
+              Pedidos
             </a>
+            <div class="collapse" id="pedidos">
+              <a class="dropdown-item" href="#">Pendientes</a>
+              <a class="dropdown-item" href="#">Canceladas</a>
+            </div>
           </li>
           <hr>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#config" aria-expanded="false" aria-controls="collapseExample">
               <span data-feather="users"></span>
-              Ubicación
+              Configuración
             </a>
-          </li>
-          <hr>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Atención al cliente
-            </a>
+            <div class="collapse" id="config">
+              <a class="dropdown-item" href="#">Medios de pago</a>
+              <a class="dropdown-item" href="#">Sucursales</a>
+            </div>
           </li>
           <hr>
         </ul>
