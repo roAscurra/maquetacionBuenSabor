@@ -2,6 +2,9 @@
     padding: 16px;
     outline: 1px black solid;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .cabecera {
@@ -9,9 +12,43 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .icono {
     width: 24px;
     height: 24px;
 }
+
+.sucursales {
+    text-align: start;
+}
+
+.nombre {
+    margin-bottom: 0;
+}
+
+.titulo{
+    display: flex;
+    gap: 8px;
+
+}
+
+.insignia {
+    background-color: lightcyan;
+    padding: 2px;
+    border-radius: 10px;
+    outline: 1px cyan solid;
+    font-size: 14px;
+
+}
+
+.editar {
+    all: unset;
+    color: blue;
+    display: flex;
+    gap: 4px;
+
+}
+
+
