@@ -1,3 +1,171 @@
-<div class="pedidos">
-    <h2>pedidos</h2>
-</div>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de pedidos</title>
+</head>
+
+<body>
+    <style>
+        .pedidos {
+            width: 90%;
+            height: 100%;
+            overflow: auto;
+            margin-top: 20px;
+        }
+
+        .pedidos table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 3px solid rgb(142, 142, 142);
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .pedidos h2 {
+            font-size: 35px;
+            text-align: left;
+            margin: 20px;
+            margin-right: auto;
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+        }
+
+        .contenedor button {
+            color: white;
+            background-color: blue;
+            border-radius: 20px;
+            border-color: blue;
+            height: 45px;
+            width: 150px;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+
+        .contenedor button:hover {
+            background-color: darkblue;
+            border-color: darkblue;
+        }
+    </style>
+
+    <div class="pedidos">
+        <div class="contenedor">
+            <h2 class="titulo">Listado de Pedidos</h2>
+            <button class="button">Exportar lista</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Venta</th>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Total</th>
+                    <th>Productos</th>
+                    <th>Estado del Pago</th>
+                    <th>Envío</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>2024-03-20</td>
+                    <td>cliente1@example.com</td>
+                    <td>$120.00</td>
+                    <td>Hamburguesa, Papas Fritas</td>
+                    <td>Pagado</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>2024-03-18</td>
+                    <td>cliente2@example.com</td>
+                    <td>$90.00</td>
+                    <td>Pizza Grande</td>
+                    <td>Pagado</td>
+                    <td>Take Away</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>2024-03-16</td>
+                    <td>cliente3@example.com</td>
+                    <td>$150.00</td>
+                    <td>Lomo Completo, Papas Fritas</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>2024-03-14</td>
+                    <td>cliente4@example.com</td>
+                    <td>$80.00</td>
+                    <td>Pancho Especial, Gaseosa</td>
+                    <td>Pagado</td>
+                    <td>Take Away</td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>2024-03-12</td>
+                    <td>cliente5@example.com</td>
+                    <td>$100.00</td>
+                    <td>Hamburguesa Doble, Papas Fritas</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>2024-03-10</td>
+                    <td>cliente6@example.com</td>
+                    <td>$110.00</td>
+                    <td>Pizza Familiar, Empanadas</td>
+                    <td>Pagado</td>
+                    <td>Take Away</td>
+                </tr>
+                <tr>
+                    <td>007</td>
+                    <td>2024-03-08</td>
+                    <td>cliente7@example.com</td>
+                    <td>$130.00</td>
+                    <td>Lomito, Gaseosa</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>008</td>
+                    <td>2024-03-06</td>
+                    <td>cliente8@example.com</td>
+                    <td>$70.00</td>
+                    <td>Pancho, Papas Fritas</td>
+                    <td>Pagado</td>
+                    <td>Take Away</td>
+                </tr>
+                <tr>
+                    <td>009</td>
+                    <td>2024-03-04</td>
+                    <td>cliente9@example.com</td>
+                    <td>$90.00</td>
+                    <td>Pizza Mediana</td>
+                    <td>Pendiente</td>
+                    <td>Delivery</td>
+                </tr>
+                <tr>
+                    <td>010</td>
+                    <td>2024-03-02</td>
+                    <td>cliente10@example.com</td>
+                    <td>$120.00</td>
+                    <td>Hamburguesa, Gaseosa</td>
+                    <td>Pagado</td>
+                    <td>Take Away</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
