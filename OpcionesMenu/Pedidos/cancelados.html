@@ -13,7 +13,12 @@
             width: 90%;
             height: 100%;
             overflow: auto;
-            margin-top: 20px;
+            margin-top: 50px;
+        }
+
+        .cancelados table{
+            margin-top: 50px;
+            align-items: center;
         }
 
         .cancelados h2 {
@@ -43,6 +48,17 @@
             background-color: darkblue;
             border-color: darkblue;
         }
+
+        .busqueda{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px;
+            
+        }
+        .busqueda input{
+            width: 300px;
+            border-radius: 10x; 
+        }
     </style>
 
     <div class="cancelados">
@@ -50,9 +66,14 @@
             <h2 class="titulo">Pedidos Cancelados</h2>
             <button class="button">Exportar lista</button>
         </div>
+        <div class="busqueda">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input type="text" id="busqueda" placeholder="Buscar por cliente, producto, etc.">
+        </div>
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Venta</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Cliente</th>
                     <th scope="col">Total</th>
@@ -62,6 +83,7 @@
             </thead>
             <tbody>
                 <tr>
+                    <td>001</td>
                     <td>2024-03-12</td>
                     <td>cliente1@email.com</td>
                     <td>$45.00</td>
@@ -69,6 +91,7 @@
                     <td>Demora en la entrega</td>
                 </tr>
                 <tr>
+                    <td>002</td>
                     <td>2024-03-11</td>
                     <td>cliente2@email.com</td>
                     <td>$30.00</td>
@@ -76,6 +99,7 @@
                     <td>Problema con el pago</td>
                 </tr>
                 <tr>
+                    <td>003</td>
                     <td>2024-03-10</td>
                     <td>cliente3@email.com</td>
                     <td>$20.00</td>
@@ -83,6 +107,7 @@
                     <td>Cambio de opinión</td>
                 </tr>
                 <tr>
+                    <td>004</td>
                     <td>2024-03-09</td>
                     <td>cliente4@email.com</td>
                     <td>$18.00</td>
@@ -90,6 +115,7 @@
                     <td>Artículo no disponible</td>
                 </tr>
                 <tr>
+                    <td>005</td>
                     <td>2024-03-08</td>
                     <td>cliente5@email.com</td>
                     <td>$50.00</td>
@@ -97,6 +123,7 @@
                     <td>Demora en la entrega</td>
                 </tr>
                 <tr>
+                    <td>006</td>
                     <td>2024-03-07</td>
                     <td>cliente6@email.com</td>
                     <td>$25.00</td>
@@ -104,6 +131,7 @@
                     <td>Error en la dirección de entrega</td>
                 </tr>
                 <tr>
+                    <td>007</td>
                     <td>2024-03-06</td>
                     <td>cliente7@email.com</td>
                     <td>$15.00</td>
