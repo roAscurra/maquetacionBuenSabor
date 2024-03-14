@@ -12,8 +12,13 @@
         .pedidos {
             width: 90%;
             height: 100%;
-            overflow: auto;
-            margin-top: 20px;
+            overflow: auto;            
+            margin-top: 50px;
+        }
+
+        .pedidos table{
+            margin-top: 50px;
+            align-items: center;
         }
 
         .pedidos h2 {
@@ -43,12 +48,25 @@
             background-color: darkblue;
             border-color: darkblue;
         }
+
+        .busqueda{
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px;
+        }
+        .busqueda input{
+            width: 300px;
+            border-radius: 10x; 
+        }
     </style>
 
     <div class="pedidos">
         <div class="contenedor">
             <h2 class="titulo">Listado de Pedidos</h2>
             <button class="button">Exportar lista</button>
+        </div>
+        <div class="busqueda">
+            <input type="text" id="busqueda" placeholder="Buscar por cliente, producto, etc.">
         </div>
         <table class="table">
             <thead>
