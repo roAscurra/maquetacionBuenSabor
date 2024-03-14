@@ -14,6 +14,9 @@
         .table{
             margin-top: 5%;
         }
+        .search-container{
+            margin-top: 2%;
+        }
     </style>
 </head>
 
@@ -29,7 +32,10 @@
                         <button type="button" class="btn btn-primary text-end rounded-pill" data-bs-toggle="modal" data-bs-target="#agregarCupon"><i class="bi bi-plus-circle"></i> <span>Crear Cupón</span></button>
                     </div>
                 </div>
-                
+                <div class="search-container input-group">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                </div>      
                 <table class="table">
                     <thead>
                       <tr>
@@ -45,7 +51,7 @@
                         <th scope="row">PRIMERCOMPRA</th>
                         <td>15%</td>
                         <td>2024-04-01</td>
-                        <td><span class="badge bg-success rounded-pill">Activo</span></td>
+                        <td><span class="badge bg-success rounded-pill">Vigente</span></td>
                         <td><i class="bi bi-trash"></i>
                             <i class="bi bi-eye-slash"></i>                
                         </td>
