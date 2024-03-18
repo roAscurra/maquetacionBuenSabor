@@ -1,119 +1,268 @@
+<link rel="stylesheet" href="OpcionesMenu/Productos/listaProductos.css">
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de pedidos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <style>
-        .cupones {
-            margin-top: 20px;
-        }
 
-        .tabla-pedidos {
-            margin-top: 50px;
-            align-items: center;
-        }
-
-        .imagen-producto {
-            max-width: 200px;
-            height: auto;
-            margin-left: 290px
-        }
-
-        /* Estilos para centrar verticalmente el contenido de las celdas de la tabla */
-        .tabla-pedidos th,
-        .tabla-pedidos td {
-            vertical-align: middle !important;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
+    <div></div>
     <div class="container">
-        <div class="row">
-            <div class="cupones col-md-12">
-                <div class="contenedor row">
-                    <div class="col">
-                        <h2 class="titulo text-start">Productos</h2>
-                    </div>
-                    <div class="col-auto">
-                        <button type="button" class="btn btn-primary text-end rounded-pill" data-bs-toggle="modal" data-bs-target="#agregarProductoModal"><i class="bi bi-plus-circle"></i> <span>Agregar producto</span></button>
-                    </div>
-                </div>
-
-                <table class="table tabla-pedidos">
-                    <thead>
-                        <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="align-middle">
-                                <div class="d-flex align-items-center">
-                                    <p>Pizza</p>
-                                    <img src="https://www.ocu.org/-/media/ocu/images/home/alimentacion/alimentos/pizzas_selector_1600x900.jpg?rev=6a81e278-07fc-4e95-9ba1-361063f35adf&hash=B8B1264AB6FC3F4B1AE140EB390208CD" 
-                                        alt="Imagen de producto" 
-                                        class="imagen-producto">
-                                </div>
-                            </td>
-                            <td class="align-middle">5</td>
-                            <td class="align-middle">Precio</td>
-                            <td class="align-middle">
-                                <i class="bi bi-trash"></i>
-                                <i class="bi bi-eye-slash"></i>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        <h1>Productos</h1>
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-primary text-end rounded-pill btn-sm text-end rounded-pill"
+            data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
+            <i class="bi bi-plus-circle"></i> <span>Agregar producto</span>
+        </button>
     </div>
 
-    <!-- Modal para agregar producto -->
-    <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+    <!-- Modal "Agregar producto" -->
+    <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="agregarProductoModalLabel">Crear Pedido</h5>
+                    <h5 class="modal-title" id="agregarProductoModalLabel">Agregar producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="productoInput" class="form-label">Producto</label>
-                        <input type="text" class="form-control" id="productoInput" placeholder="Ingrese el nombre del producto">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Nombre y descripción</h3>
+                            <div style="margin-top: 20px;">
+                                <div class="form-group">
+                                    <label for="nombre" style="font-size: 12px; color: gray;">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" style="font-size: 14px;"
+                                        placeholder="Jarrón">
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcion" style="font-size: 12px; color: gray;">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="imagenInput" class="form-label">Imagen</label>
-                        <input type="file" class="form-control" id="imagenInput">
+                    <hr> <!-- Línea divisoria -->
+                    <div class="row">
+                        <div class="col">
+                            <h3>Fotos</h3>
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="foto1">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="foto2">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="foto3">
+                            </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="foto4">
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="stockInput" class="form-label">Stock</label>
-                        <input type="number" class="form-control" id="stockInput" placeholder="Ingrese la cantidad en stock">
-                    </div>
-                    <div class="mb-3">
-                        <label for="precioInput" class="form-label">Precio</label>
-                        <input type="number" class="form-control" id="precioInput" placeholder="Ingrese el precio del producto">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar cambios</button>
-                </div>
+                    <hr> <!-- Línea divisoria -->
+                    <div class="row">
+                        <div class="col">
+                            <h3>Precios</h3>
+                            <label for="precioVenta" style="font-size: 12px; color: gray;">Precio de venta</label>
+                            <input type="number" class="form-control" id="precioVenta" style="font-size: 14px;"
+                                placeholder="$0.00">
+
+                            <label for="precioPromocional" style="font-size: 12px; color: gray;">Precio
+                                promocional</label>
+                            <input type="number" class="form-control" id="precioPromocional" style="font-size: 14px;"
+                                placeholder="$0.00">
+
+                            <label for="costo" style="font-size: 12px; color: gray;">Costo</label>
+                            <input type="number" class="form-control" id="costo" style="font-size: 14px;"
+                                placeholder="$0.00">
+
             </div>
         </div>
     </div>
 
-    <!-- Agrega los scripts de Bootstrap al final del documento -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+
+    <div class="button2">
+        <!-- Botón con menú desplegable -->
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Más opciones
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <!-- Opción 1 con icono -->
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ordenarProductosModal">
+                        <i class="bi bi-sort-down-alt"></i> Organizar productos <!-- Agregamos el icono aquí -->
+                    </a>
+                </li>
+                <!-- Opción 2 -->
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="bi bi-arrow-down-circle"></i> Exportar productos
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ordenarProductosModal" tabindex="-1" aria-labelledby="ordenarProductosModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ordenarProductosModalLabel">Ordenar productos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido del modal -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill dropdown-toggle"
+                            onclick="mostrarLado('izquierdo')">Destacar</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill dropdown-toggle"
+                            onclick="mostrarLado('derecho')">Ordenar</button>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                        <div class="lado" id="ladoIzquierdo" style="display: block;">
+
+                            <!-- HTML con botones y mensaje dentro de los botones -->
+                            <h3>Destacar</h3>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <i class="fas fa-star"></i> <!-- Icono de estrella -->
+                                    <span class="fw-bold">Destacados</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <span class="fw-bold">Ofertas</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <span class="fw-bold">Promociones</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <span class="fw-bold">Novedades</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <span class="fw-bold">Más vendidos</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm custom-btn" type="button">
+                                    <span class="fw-bold">Principal</span>
+                                    <span class="badge-container">
+                                        <span class="badge bg-light text-dark">0 productos</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- Botones de cerrar y guardar -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar
+                        cambios</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lado" id="ladoDerecho" style="display: none;">
+            <h3>Ordenar</h3>
+            <div class="dropdown">
+                <div id="container">
+                    <div class="separacion">
+                        <div class="titulo">Productos sin stock</div>
+                    </div>
+                    <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
+                        style="height: 50px;">
+                        <option value="1">Mostrar al final de la lista de productos</option>
+                        <option value="2">Mantener el orden original</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div id="container2">
+                    <div class="titulo">Productos por sección</div>
+                    <p style="font-size: 15px;">Cambia el orden en que se muestran los productos en la
+                        sección de la tienda</p>
+                    <p style="font-size: 14px;">Ordenar los productos de la sección:</p>
+                    <div class="dropdown">
+                        <div style="display: flex; flex-direction: column;">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle btn-sm" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                                </ul>
+                            </div>
+                            <p style="margin: 10px 0; font-size: 14px;">Ordenado por</p>
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle btn-sm" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Más vendidos
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar
+                    cambios</button>
+            </div>
+        </div>
+
+        <script>
+            tinymce.init({
+                selector: '#editor'
+            });
+        </script>
+        <script>
+            function mostrarLado(lado) {
+                if (lado === 'izquierdo') {
+                    document.getElementById('ladoIzquierdo').style.display = 'block';
+                    document.getElementById('ladoDerecho').style.display = 'none';
+                } else {
+                    document.getElementById('ladoIzquierdo').style.display = 'none';
+                    document.getElementById('ladoDerecho').style.display = 'block';
+                }
+            }
+
+            function guardarCambios() {
+                // Lógica para guardar los cambios
+                console.log("Cambios guardados");
+            }
+        </script>
 </body>
 
 </html>
