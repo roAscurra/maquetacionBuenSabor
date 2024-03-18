@@ -133,12 +133,11 @@
       </nav>
 
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div
-          class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center"
-          id="contenedorComponentes">
-          <iframe src="OpcionesMenu/Inicio/Inicio.html" frameborder="0" width="100%" height="600"></iframe>
+        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center" id="contenedorComponentes">
+          <!-- Contenido dinámico cargado por JavaScript -->
         </div>
       </main>
+    
 
     </div>
   </div>
@@ -157,7 +156,13 @@
       xhttp.open("GET", url, true);
       xhttp.send();
     }
+
+    window.onload = function () {
+      cargarComponente('OpcionesMenu/Inicio/Inicio.html');
+    };
   </script>
+
+  
 </body>
 
 </html>
