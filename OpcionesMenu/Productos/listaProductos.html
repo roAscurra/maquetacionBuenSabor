@@ -27,6 +27,105 @@
         </button>
     </div>
 
+    <table class="table" style="border-collapse: collapse;">
+        <tbody>
+            <tr>
+                <td colspan="2" style="vertical-align: middle;">Producto</td>
+                <td style="vertical-align: middle; ">Stock</td>
+                <td style="vertical-align: middle;">Precio</td>
+                <td style="vertical-align: middle;">Promocional</td>
+                <td style="vertical-align: middle;text-align: center">Acciones</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: middle;">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.fEoDyZb8pLNkyWAFDy4jLAHaFR&pid=Api&P=0&h=180"
+                        alt="Pizza" width="200">
+                    <span style="color: #6c757d; font-size: 14px;">Pizza</span>
+                </td>
+                <td></td>
+                <td style="text-align: center;vertical-align: middle;">
+                    <input type="number" class="form-control" id="precioVenta"
+                        style="font-size: 14px; width: 60px;border: 1px solid black;  " placeholder="5">
+                </td>
+
+                <td style="text-align: center; vertical-align: middle;">
+                    <input type="number" class="form-control" id="precioVenta"
+                        style="text-decoration: line-through;font-size: 14px; width: 80px;border: 1px solid black; "
+                        placeholder="$5000">
+                </td>
+
+                <td style="text-align: center; vertical-align: middle;">
+                    <input type="number" class="form-control" id="precioVenta"
+                        style=" font-size: 14px; width: 80px;border: 1px solid black;" placeholder="$1000">
+                </td>
+
+                <td style="vertical-align: middle;text-align: center">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-dark border-0" title="Compartir" data-bs-toggle="tooltip"
+                            data-bs-placement="top" onclick="showToast()">
+                            <i class="bi bi-share"></i>
+                        </button>
+                        <!-- Cuadro de mensaje -->
+                        <div class="toast-container" id="toastContainer"
+                            style="position: fixed; top: 20px; right: 20px;">
+                            <div class="toast" id="toastMessage" role="alert" aria-live="assertive" aria-atomic="true"
+                                data-bs-autohide="false">
+                                <div class="toast-header">
+                                    <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="toast"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="toast-body">
+                                    Link copiado
+                                </div>
+                                <div class="toast-footer">
+                                    <button type="button" class="btn btn-secondary btn-sm"
+                                        data-bs-dismiss="toast">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="btn btn-outline-dark border-0" title="Duplicar" data-bs-toggle="tooltip"
+                            data-bs-placement="top" onclick="showToast()">
+                            <i class="bi bi-files"></i>
+                        </button>
+                        
+                        <!-- Cuadro de mensaje -->
+                        
+
+                        <button class="btn btn-outline-dark border-0" title="Eliminar" data-bs-toggle="modal"
+                            data-bs-target="#confirmationModal">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Modal de Confirmación de Eliminación -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+                    <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Está seguro de que desea eliminar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteItem()">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal "Agregar producto" -->
     <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel"
         aria-hidden="true">
