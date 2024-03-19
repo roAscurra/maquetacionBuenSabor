@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,71 +15,91 @@
       border-radius: 50%;
       margin-right: 10px;
     }
-    .row{
+
+    .row {
       height: auto;
     }
   </style>
 </head>
+
 <body>
 
-<div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 d-none d-md-block bg-light sidebar h-100">
-      <div class="sidebar-sticky vh-100">
-        <br>
-        <ul class="nav flex-column"> 
-          <li class="nav-item dropdown">
-            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar h-100">
+        <div class="sidebar-sticky vh-100">
+          <br>
+          <ul class="nav flex-column">
+            <li class="nav-item dropdown">
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                aria-controls="collapseExample">
                 <div style="display: flex; align-items: center;">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" width="50" height="50" class="rounded-circle me-2">
-                    <span style="display: inline-block;">Mi Cuenta <span class="text-muted">user@example.com</span></span>
+                  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                    alt="" width="50" height="50" class="rounded-circle me-2">
+                  <span style="display: inline-block;"><span class="text-muted">user@example.com</span></span>
                 </div>
-            </a>
-            <div  class="collapse" id="collapseExample">
+              </a>
+              <div class="collapse" id="collapseExample">
                 <a class="dropdown-item" href="#">Cerrar sesión</a>
-            </div>
-        </li>
-          <hr>
-          <li class="nav-item dropdown">
-            <a class="nav-link">
-              <i class="bi bi-house"></i>
-                <span>Inicio</span> 
-            </a>
-          </li>
-          <hr>
-          <li class="nav-item">
-            <a onclick="cargarComponente('OpcionesMenu/Estadisticas/estadisticas.html')"  class="nav-link">
-              <i class="bi bi-bar-chart"></i>              
-              <span data-feather="file"></span>
-              Estadisticas
-            </a>
-          </li>
-          <hr>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false" aria-controls="collapseExample">
-              <i class="bi bi-cart-check"></i>
-              <span data-feather="file"></span>
-              Productos
-            </a>
-            <div  class="collapse" id="productos">
-              <a class="dropdown-item" href="#"onclick="cargarComponente('OpcionesMenu/Productos/listaProductos.html')">Lista de productos</a>
-              <a class="dropdown-item" href="#"onclick="cargarComponente('OpcionesMenu/Productos/categorias.html')">Categorias</a>
-            </div>
-          </li>
-          <hr>
-          <li class="nav-item">
-            <a onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')" class="nav-link" data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false" aria-controls="collapseExample">
-              <i class="bi bi-tags"></i>
-              <span data-feather="shopping-cart"></span>
-              Marketing
-            </a>
-            <div class="collapse" id="marketing">
-              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')">Cupones</a>
-              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Marketing/promociones.html')">Promociones</a>
-            </div>
-          </li>
-          <hr>
-          <li class="nav-item">
+              </div>
+            </li>
+            <hr>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" onclick="cargarComponente('OpcionesMenu/Inicio/Inicio.html')">
+                <i class="bi bi-house"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <hr>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" onclick="cargarComponente('OpcionesMenu/Usuarios/Usuarios.html')">
+                <i class="bi bi-person-check"></i>
+                <span>Usuarios</span>
+              </a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a onclick="cargarComponente('OpcionesMenu/Estadisticas/estadisticas.html')" class="nav-link">
+                <i class="bi bi-bar-chart"></i>
+                <span data-feather="file"></span>
+                Estadisticas
+              </a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false"
+                aria-controls="collapseExample">
+                <i class="bi bi-cart-check"></i>
+                <span data-feather="file"></span>
+                Productos
+              </a>
+              <div class="collapse" id="productos">
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Productos/listaProductos.html')">Lista de productos</a>
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Productos/categorias.html')">Categorias</a>
+              </div>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')" class="nav-link"
+                data-bs-toggle="collapse" data-bs-target="#marketing" aria-expanded="false"
+                aria-controls="collapseExample">
+                <i class="bi bi-tags"></i>
+                <span data-feather="shopping-cart"></span>
+                Marketing
+              </a>
+              <div class="collapse" id="marketing">
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Marketing/cupones.html')">Cupones</a>
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Marketing/promociones.html')">Promociones</a>
+              </div>
+            </li>
+
+            <!--
+               <hr>
+             <li class="nav-item">
             <a class="nav-link" href="#" onclick="cargarComponente('OpcionesMenu/Pedidos/pedidos.html')" data-bs-toggle="collapse" data-bs-target="#pedidos" aria-expanded="false" aria-controls="collapseExample" >
               <i class="bi bi-basket3"></i>
               <span data-feather="users"></span>
@@ -89,47 +110,59 @@
               <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Pedidos/cancelados.html')">Cancelados</a>
             </div>
           </li>
-          <hr>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#config" aria-expanded="false" aria-controls="collapseExample">
-              <i class="bi bi-gear"></i>
-              <span data-feather="users"></span>
-              Configuración
-            </a>
-            <div class="collapse" id="config">
-              <a class="dropdown-item" href="#"onclick="cargarComponente('OpcionesMenu/Configuracion/medio-de-pago.html')">Medios de pago</a>
-              <a class="dropdown-item" href="#" onclick="cargarComponente('OpcionesMenu/Configuracion/sucursales.html')">Sucursales</a>
-            </div>
-          </li>
-          <hr>
-        </ul>
-      </div>
-    </nav>
+          -->
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center" id="contenedorComponentes">
-        <h2>El Buen Sabor</h2>
-      </div>
-    </main>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#config" aria-expanded="false"
+                aria-controls="collapseExample">
+                <i class="bi bi-gear"></i>
+                <span data-feather="users"></span>
+                Configuración
+              </a>
+              <div class="collapse" id="config">
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Configuracion/medio-de-pago.html')">Medios de pago</a>
+                <a class="dropdown-item" href="#"
+                  onclick="cargarComponente('OpcionesMenu/Configuracion/sucursales.html')">Sucursales</a>
+              </div>
+            </li>
+            <hr>
+          </ul>
+        </div>
+      </nav>
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom text-center" id="contenedorComponentes">
+          <!-- Contenido dinámico cargado por JavaScript -->
+        </div>
+      </main>
     
+
+    </div>
   </div>
-  
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+  <script>
     function cargarComponente(url) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("contenedorComponentes").innerHTML = this.responseText;
-      }
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("contenedorComponentes").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+
+    window.onload = function () {
+      cargarComponente('OpcionesMenu/Inicio/Inicio.html');
     };
-    xhttp.open("GET", url, true);
-    xhttp.send();
-  }
-</script>
+  </script>
+
+  
 </body>
+
 </html>
