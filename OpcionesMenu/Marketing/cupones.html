@@ -52,8 +52,9 @@
                         <td>15%</td>
                         <td>2024-04-01</td>
                         <td><span class="badge bg-success rounded-pill">Vigente</span></td>
-                        <td><i class="bi bi-trash"></i>
-                            <i class="bi bi-eye-slash"></i>                
+                        <td>
+                          <i class="bi bi-trash text-danger" data-bs-toggle="modal" data-bs-target="#eliminarCupon"></i>
+                          <i class="bi bi-eye-slash text-primary" data-bs-toggle="modal" data-bs-target="#desactivarCupon"></i>                
                         </td>
                       </tr>
                       <tr>
@@ -62,8 +63,8 @@
                         <td>2024-02-01</td>
                         <td><span class="badge bg-danger rounded-pill">Vencido</span></td>
                         <td>
-                            <i title="Eliminar" class="bi bi-trash"></i>
-                            <i title="Desactivar" class="bi bi-eye-slash"></i>                
+                          <i class="bi bi-trash text-danger" data-bs-toggle="modal" data-bs-target="#eliminarCupon"></i>
+                          <i class="bi bi-eye-slash text-primary" data-bs-toggle="modal" data-bs-target="#activarCupon"></i>                
                         </td>
                       </tr>
                     </tbody>
@@ -86,11 +87,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="message-text" class="col-form-label">Descuento porcentil:</label>
-                    <input class="form-control rounded-pill" id="message-text"></input>
+                    <input type="number" class="form-control rounded-pill" id="message-text"></input>
                 </div>
                 <div class="mb-3">
                     <label for="message-text" class="col-form-label">Fecha de Vencimiento:</label>
-                    <input class="form-control rounded-pill" id="message-text"></input>
+                    <input type="date" class="form-control rounded-pill" id="message-text"></input>
                 </div>
                 
               </form>
@@ -100,8 +101,58 @@
             </div>            
           </div>
         </div>
+    </div>
+    <div class="modal fade" id="eliminarCupon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Desea eliminar este cupón?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Al eliminarlo, la información del mismo se perderá definitivamente</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger rounded-pill">Eliminar</button>
+          </div>            
+        </div>
       </div>
-   
+    </div>
+    <div class="modal fade" id="activarCupon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Desea activar este cupón?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Al activarlo, sus clientes podrán usarlo en tus productos.</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary rounded-pill">Activar</button>
+          </div>            
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="desactivarCupon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¿Desea desactivar este cupón?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Al desactivarlo, sus clientes no podrán usarlo en tus productos.</p>
+          </div>
+          <div class="modal-footer mx-auto">
+            <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary rounded-pill">Desactivar</button>
+          </div>            
+        </div>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
