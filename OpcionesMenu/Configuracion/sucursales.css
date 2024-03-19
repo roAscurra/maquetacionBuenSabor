@@ -1,54 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}       
+
+/* Estilos para el contenedor principal */
+.container {
+    width: 100%; /* Ocupa toda la página */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    text-align: left;
+}
+
+/* Estilos para el título h1 */
+h1 {
+    margin-left: 0px; /* Margen izquierdo */
+    color: black; /* Color de texto oscuro */
+}
+
+/* Estilos para el contenedor de tarjetas */
 .tarjeta {
-    padding: 16px;
-    outline: 1px black solid;
+    background-color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid lightblue; /* Borde celeste */
     display: flex;
     flex-direction: column;
-    gap: 8px;
-}
-
-.cabecera {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.icono {
-    width: 24px;
-    height: 24px;
-}
-
-.sucursales {
-    text-align: start;
-}
-
-.nombre {
-    margin-bottom: 0;
-}
-
-.titulo{
-    display: flex;
-    gap: 8px;
-
-}
-
-.insignia {
-    background-color: lightcyan;
-    padding: 2px;
-    border-radius: 10px;
-    outline: 1px cyan solid;
-    font-size: 14px;
-
-}
-
-.editar {
-    all: unset;
-    color: blue;
-    display: flex;
     gap: 4px;
+}
+
+/* Estilos para el cuerpo */
+.cuerpo {
+}
+
+/* Estilos para las acciones */
+.acciones {
+    text-align: left;
+}
+
+/* Estilos para los iconos */
+.icono {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+    text-align: left;
+}
+
+/* Estilos para los textos */
+p, h4, h6 {
+    margin: 0;
+    text-align: left;
+    display: inline; /* Mostrar en línea */
+}
+
+/* Estilos para el botón */
+.editar {
+    color: black;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+}
+
+
+ /* Estilos para el contenedor de tarjetas */
+ .tarjeta2 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid lightblue; /* Borde celeste */
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+/* Estilos para el contenedor de la casita y el texto "Mendoza" */
+.titulo {
+    display: flex; /* Usa el modelo de caja flexible */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+/* Estilos para el texto "Mendoza" */
+.titulo .nombre, .icono {
+    font-size: 18px; /* Mismo tamaño de fuente para el texto y el icono */
+    text-align: left;
+}
+
+/* Estilos para el contenedor de la casita y el texto "Mendoza" */
+.cabecera {
+    display: flex; /* Usa el modelo de caja flexible */
+    justify-content: space-between; /* Coloca los elementos al principio y al final del contenedor */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+/* Estilos para el texto "Principal" */
+.insignia {
+    display: inline-block; /* Hacer que el elemento sea un bloque en línea */
+    padding: 5px 10px; /* Añadir espacio alrededor del texto */
+    border-radius: 5px; /* Hacer que los bordes sean redondeados */
+    background-color: azure; /* Color de fondo */
+    transition: background-color 0.3s; /* Agregar una transición suave */
+    border: 2px solid lightblue; /* Agregar bordes */
 
 }
+
+.insignia:hover {
+    background-color: lightcyan; /* Cambiar el color de fondo al pasar el mouse */
+}
+
+/* Estilos para el contenedor de "Otros centros" */
+.sucursales > div:last-child {
+    margin-top: 20px; /* Agrega margen superior para separar "Otros centros" del contenido superior */
+}
+
+.titulo-tarjeta {
+    display: flex;
+}
+
+
 
 
