@@ -150,40 +150,42 @@
         <!-- Modal de Modificación de Usuario -->
         <div class="modal fade" id="modificarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Modificar Usuario</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="formModificarUsuario" class="row g-3">
-                            <div class="col-md-6">
-                                <label for="nombreUsuario" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="nombreUsuario"
-                                    placeholder="Nombre del usuario">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="apellidoUsuario" class="form-label">Apellido:</label>
-                                <input type="text" class="form-control form-control-sm" id="apellidoUsuario"
-                                    placeholder="Apellido del usuario">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="emailUsuario" class="form-label">Correo Electrónico:</label>
-                                <input type="email" class="form-control form-control-sm" id="emailUsuario"
-                                    placeholder="Correo electrónico del usuario">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="rolUsuario" class="form-label">Rol:</label>
-                                <select class="form-select form-control-sm" id="rolUsuario">
-                                    <option selected>Selecciona el rol</option>
-                                    <option value="Administrador">Administrador</option>
-                                    <option value="Cajero">Cajero</option>
-                                    <option value="Cocinero">Cocinero</option>
-                                    <option value="Delivery">Delivery</option>
-                                </select>
-                            </div>
-                        </form>
+                        <div class="row">
+                            <form id="formModificarUsuario" class="col-12">
+                                <div class="mb-3">
+                                    <label for="nombreUsuario" class="form-label">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombreUsuario"
+                                        placeholder="Nombre del usuario">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="apellidoUsuario" class="form-label">Apellido:</label>
+                                    <input type="text" class="form-control" id="apellidoUsuario"
+                                        placeholder="Apellido del usuario">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="emailUsuario" class="form-label">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="emailUsuario"
+                                        placeholder="Correo electrónico del usuario">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="rolUsuario" class="form-label">Rol:</label>
+                                    <select class="form-select" id="rolUsuario">
+                                        <option selected>Selecciona el rol</option>
+                                        <option value="Administrador">Administrador</option>
+                                        <option value="Cajero">Cajero</option>
+                                        <option value="Cocinero">Cocinero</option>
+                                        <option value="Delivery">Delivery</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -192,6 +194,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Modal de Eliminar Usuario -->
         <div class="modal fade" id="eliminarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
