@@ -1,51 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <!-- Importa el archivo CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="OpcionesMenu/Productos/listaProductos.css"> -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
-        .cupones {
+        .productos{
             margin-top: 2%;
         }
-
-        .table {
+        .table{
             margin-top: 5%;
         }
-
-        .search-container {
+        .search-container{
             margin-top: 2%;
         }
+          #tooltip-message {
+            position: absolute;
+            bottom: -30px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+          }
+          #tooltip-message2 {
+            position: absolute;
+            bottom: -30px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+          }
+          #precioVenta {
+            text-decoration: line-through;
+            }
+        
     </style>
 </head>
 
 <body>
-    <div class="container mx-3 mt-3">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="productos col-md-12">
                 <div class="contenedor row">
                     <div class="col">
-                        <h1 class="titulo text-start">Productos</h1>
+                        <h2 class="titulo text-start">Productos</h2>
                     </div>
                     <div class="dropdown col-auto">
-                        <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle"
-                            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-secondary text-end rounded-pill dropdown-toggle" type="button"
+                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             Más opciones
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li>
-                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                    data-bs-target="#ordenarProductosModal">
-                                    <i class="bi bi-sort-down-alt"></i> Organizar productos
-                                    <!-- Agregamos el icono aquí -->
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ordenarProductosModal">
+                                    <i class="bi bi-sort-down-alt"></i> Organizar productos <!-- Agregamos el icono aquí -->
                                 </a>
                             </li>
                             <li>
@@ -56,7 +77,7 @@
                         </ul>
                     </div>
                     <div class="col-auto">
-                        <button type="button" class="btn btn-primary text-end rounded-pill btn-sm"
+                        <button type="button" class="btn btn-primary text-end rounded-pill"
                             data-bs-toggle="modal" data-bs-target="#agregarProductoModal">
                             <i class="bi bi-plus-circle"></i> <span>Agregar producto</span>
                         </button>
@@ -64,279 +85,284 @@
                     <div class="search-container input-group">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
                         <input type="text" class="form-control" placeholder="Buscar...">
-                    </div>
+                    </div>  
                 </div>
-
-                <table class="table" style="border-collapse: collapse;">
+        
+                <table class="table">
                     <tbody>
                         <tr>
-                            <td colspan="2" style="vertical-align: middle;">Producto</td>
-                            <td style="vertical-align: middle; ">Stock</td>
-                            <td style="vertical-align: middle;">Precio</td>
-                            <td style="vertical-align: middle;">Promocional</td>
-                            <td style="vertical-align: middle;text-align: center">Acciones</td>
+                            <td scope="col">Producto</td>
+                            <td scope="col"></td>
+                            <td scope="col">Stock</td>
+                            <td scope="col">Precio</td>
+                            <td scope="col">Promocional</td>
+                            <td scope="col">Acciones</td>
                         </tr>
                         <tr>
-                            <td style="vertical-align: middle;">
-                                <img src="https://tse3.mm.bing.net/th?id=OIP.fEoDyZb8pLNkyWAFDy4jLAHaFR&pid=Api&P=0&h=180"
-                                    alt="Pizza" width="200">
-                                <span style="color: #6c757d; font-size: 14px;">Pizza</span>
+                            <td class="col-md-2">
+                                <img src="https://i.pinimg.com/736x/7d/5e/2c/7d5e2cc8d01d5817d10c1ebcc6f36edf.jpg"
+                                    alt="Hamburguesas" class="img-fluid">
                             </td>
-                            <td></td>
-                            <td style="text-align: center;vertical-align: middle;">
-                                <input type="number" class="form-control" id="precioVenta"
-                                    style="font-size: 14px; width: 60px;border: 1px solid black;  " placeholder="5">
+                            <td>
+                                <span><b>Hamburguesas</b></span>
                             </td>
-
-                            <td style="text-align: center; vertical-align: middle;">
-                                <input type="number" class="form-control" id="precioVenta"
-                                    style="text-decoration: line-through;font-size: 14px; width: 80px;border: 1px solid black; "
-                                    placeholder="$5000">
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" placeholder="10">
                             </td>
-
-                            <td style="text-align: center; vertical-align: middle;">
-                                <input type="number" class="form-control" id="precioVenta"
-                                    style=" font-size: 14px; width: 80px;border: 1px solid black;" placeholder="$1000">
+            
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" id="precioVenta" placeholder="$7000">
                             </td>
-
-                            <td style="vertical-align: middle;text-align: center">
+            
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" placeholder="$2000">
+                            </td>
+            
+                            <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-outline-dark border-0" title="Compartir"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" onclick="showToast()">
+                                    <button class="btn btn-outline-dark border-0" onclick="msj()">
                                         <i class="bi bi-share"></i>
-                                    </button>
-                                    <!-- Cuadro de mensaje -->
-                                    <div class="toast-container" id="toastContainer"
-                                        style="position: fixed; top: 20px; right: 20px;">
-                                        <div class="toast" id="toastMessage" role="alert" aria-live="assertive"
-                                            aria-atomic="true" data-bs-autohide="false">
-                                            <div class="toast-header">
-                                                <button type="button" class="bi bi-x-circle border-0"
-                                                    data-bs-dismiss="toast" aria-label="Close"></button>
-                                            </div>
-
-                                            <div class="toast-body">
-                                                Link copiado
-                                            </div>
-                                            <div class="toast-footer">
-                                                <button type="button" class="btn btn-secondary btn-sm"
-                                                    data-bs-dismiss="toast">Cerrar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <button class="btn btn-outline-dark border-0" title="Duplicar"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" onclick="showToast()">
-                                        <i class="bi bi-files"></i>
-                                    </button>
-
-                                    <!-- Cuadro de mensaje -->
-
-
-                                    <button class="btn btn-outline-dark border-0" title="Eliminar"
-                                        data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                                    </button>                                 
+                                    <button class="btn btn-outline-dark border-0" title="Eliminar" data-bs-toggle="modal"
+                                        data-bs-target="#confirmationModal">
                                         <i class="bi bi-trash"></i>
                                     </button>
+                                    <div id="tooltip-message">
+                                        <span>Link copiado!</span>
+                                    </div> 
                                 </div>
                             </td>
-
+            
+                        </tr>
+                        <tr>
+                            <td class="col-md-2">
+                                <img src="https://tse3.mm.bing.net/th?id=OIP.fEoDyZb8pLNkyWAFDy4jLAHaFR&pid=Api&P=0&h=180" alt="Pizza" class="img-fluid">
+                            </td>
+                            <td>
+                                <span><b>Pizza</b></span>
+                            </td>
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" placeholder="5">
+                            </td>
+            
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" id="precioVenta" placeholder="$5000">
+                            </td>
+            
+                            <td class="col-md-1">
+                                <input type="number" class="form-control" placeholder="$1000">
+                            </td>
+            
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-outline-dark border-0" onclick="msj2()">
+                                        <i class="bi bi-share"></i>
+                                    </button>                                  
+                                    <button class="btn btn-outline-dark border-0" title="Eliminar" data-bs-toggle="modal"
+                                        data-bs-target="#confirmationModal">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                    <div id="tooltip-message2">
+                                        <span>Link copiado!</span>
+                                    </div> 
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
-                </table>
+
+                </table>        
             </div>
         </div>
     </div>
 
 
-    <!-- Modal de Confirmación de Eliminación -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
-                    <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="modal"
+        <!-- Modal de Confirmación de Eliminación -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+                        <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="modal"
                         aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ¿Está seguro de que desea eliminar?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger" onclick="deleteItem()">Eliminar</button>
+                    </div>
+                    <div class="modal-body">
+                        ¿Está seguro de que desea eliminar?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" onclick="deleteItem()">Eliminar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal "Agregar producto" -->
+           <!-- Modal "Agregar producto" -->
     <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog  modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="agregarProductoModalLabel">Agregar producto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    
-                    <div class="row">
-                        <div class="col">
-                            <h3>Nombre y descripción</h3>
-                            <div style="margin-top: 20px;">
-                                <div class="form-group">
-                                    <label for="nombre" style="font-size: 12px; color: gray;">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" style="font-size: 14px;"
-                                        placeholder="Jarrón">
-                                </div>
-                                <div class="form-group">
-                                    <label for="descripcion" style="font-size: 12px; color: gray;">Descripción</label>
-                                    <textarea class="form-control" id="descripcion" rows="4"></textarea>
-                                </div>
+    aria-hidden="true">
+    <div class="modal-dialog  modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="agregarProductoModalLabel">Agregar producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col">
+                        <h3>Nombre y descripción</h3>
+                        <div style="margin-top: 20px;">
+                            <div class="form-group">
+                                <label for="nombre" style="font-size: 12px; color: gray;">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" style="font-size: 14px;"
+                                    placeholder="Jarrón">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion" style="font-size: 12px; color: gray;">Descripción</label>
+                                <textarea class="form-control" id="descripcion" rows="4"></textarea>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <form>
+                <form>
+                    <div class="form-group">
+                        <label for="categoriaInput">Nombre de la categoría:</label>
+                        <input type="text" class="form-control" id="categoriaInput"
+                            placeholder="Escriba el nombre de la categoría">
+                    </div>
+                </form>
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Fotos</h3>
                         <div class="form-group">
-                            <label for="categoriaInput">Nombre de la categoría:</label>
-                            <input type="text" class="form-control" id="categoriaInput"
-                                placeholder="Escriba el nombre de la categoría">
+                            <input type="file" class="form-control-file" id="foto1">
                         </div>
-                    </form>
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Fotos</h3>
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="foto1">
-                            </div>
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="foto2">
-                            </div>
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="foto3">
-                            </div>
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="foto4">
-                            </div>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="foto2">
                         </div>
-                    </div>
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Precios</h3>
-                            <label for="precioVenta" style="font-size: 12px; color: gray;">Precio de venta</label>
-                            <input type="number" class="form-control" id="precioVenta" style="font-size: 14px;"
-                                placeholder="$0.00">
-
-                            <label for="precioPromocional" style="font-size: 12px; color: gray;">Precio
-                                promocional</label>
-                            <input type="number" class="form-control" id="precioPromocional" style="font-size: 14px;"
-                                placeholder="$0.00">
-
-                            <label for="costo" style="font-size: 12px; color: gray;">Costo</label>
-                            <input type="number" class="form-control" id="costo" style="font-size: 14px;"
-                                placeholder="$0.00">
-
-                            <label for="costo" style="font-size: 12px; color: gray;">Es de uso interno, tus clientes no
-                                lo verán en la tienda.</label>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="foto3">
                         </div>
-                    </div>
-
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Tipo de productos</h3>
-                            <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
-                                style="height: 50px;">
-                                <option value="1">Físico</option>
-                                <option value="2">Digital o en servicio</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Stock</h3>
-                            <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
-                                style="height: 50px;">
-                                <option value="1">Infinito</option>
-                                <option value="2">Limitado</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Códigos</h3>
-                            <div style="margin-top: 20px;">
-                                <div class="form-group">
-                                    <label for="nombre" style="font-size: 12px; color: gray;">SKU</label>
-                                    <input type="text" class="form-control" id="nombre" style="font-size: 14px;">
-
-                                    <label for="nombre" style="font-size: 12px; color: gray;">El SKU es un código que
-                                        creás internamente para ahcer un seguimiento de tus productos con
-                                        variantes</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="nombre" style="font-size: 12px; color: gray;">Código de barras</label>
-                                    <input type="text" class="form-control" id="nombre" style="font-size: 14px;">
-
-                                    <label for="nombre" style="font-size: 12px; color: gray;">El codigo de barras consta
-                                        de 13 números y se utiliza para identificar un producto</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Peso y dimensiones</h3>
-                            <label for="precioVenta" style="font-size: 12px; color: gray;">Peso</label>
-                            <input type="number" class="form-control" id="precioVenta" style="font-size: 14px;"
-                                placeholder="0.14 kg">
-
-                            <label for="precioPromocional" style="font-size: 12px; color: gray;">Profundidad</label>
-                            <input type="number" class="form-control" id="precioPromocional" style="font-size: 14px;"
-                                placeholder="30 cm">
-
-                            <label for="costo" style="font-size: 12px; color: gray;">Ancho</label>
-                            <input type="number" class="form-control" id="costo" style="font-size: 14px;"
-                                placeholder="30 cm">
-
-                            <label for="costo" style="font-size: 12px; color: gray;">Alto</label>
-                            <input type="number" class="form-control" id="costo" style="font-size: 14px;"
-                                placeholder="30 cm">
-                        </div>
-                    </div>
-
-                    <hr> <!-- Línea divisoria -->
-                    <div class="row">
-                        <div class="col">
-                            <h3>Más opciones</h3>
-                            <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
-                                style="height: 50px;">
-                                <option value="1">Este producto tiene envio gratis</option>
-                                <option value="2">Mostrar en la tienda</option>
-                            </select>
+                        <div class="form-group">
+                            <input type="file" class="form-control-file" id="foto4">
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Precios</h3>
+                        <label for="precioVenta" style="font-size: 12px; color: gray;">Precio de venta</label>
+                        <input type="number" class="form-control" id="precioVenta" style="font-size: 14px;"
+                            placeholder="$0.00">
+
+                        <label for="precioPromocional" style="font-size: 12px; color: gray;">Precio
+                            promocional</label>
+                        <input type="number" class="form-control" id="precioPromocional" style="font-size: 14px;"
+                            placeholder="$0.00">
+
+                        <label for="costo" style="font-size: 12px; color: gray;">Costo</label>
+                        <input type="number" class="form-control" id="costo" style="font-size: 14px;"
+                            placeholder="$0.00">
+
+                        <label for="costo" style="font-size: 12px; color: gray;">Es de uso interno, tus clientes no
+                            lo verán en la tienda.</label>
+                    </div>
                 </div>
+
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Tipo de productos</h3>
+                        <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
+                            style="height: 50px;">
+                            <option value="1">Físico</option>
+                            <option value="2">Digital o en servicio</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Stock</h3>
+                        <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
+                            style="height: 50px;">
+                            <option value="1">Infinito</option>
+                            <option value="2">Limitado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Códigos</h3>
+                        <div style="margin-top: 20px;">
+                            <div class="form-group">
+                                <label for="nombre" style="font-size: 12px; color: gray;">SKU</label>
+                                <input type="text" class="form-control" id="nombre" style="font-size: 14px;">
+
+                                <label for="nombre" style="font-size: 12px; color: gray;">El SKU es un código que
+                                    creás internamente para ahcer un seguimiento de tus productos con
+                                    variantes</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombre" style="font-size: 12px; color: gray;">Código de barras</label>
+                                <input type="text" class="form-control" id="nombre" style="font-size: 14px;">
+
+                                <label for="nombre" style="font-size: 12px; color: gray;">El codigo de barras consta
+                                    de 13 números y se utiliza para identificar un producto</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Peso y dimensiones</h3>
+                        <label for="precioVenta" style="font-size: 12px; color: gray;">Peso</label>
+                        <input type="number" class="form-control" id="precioVenta" style="font-size: 14px;"
+                            placeholder="0.14 kg">
+
+                        <label for="precioPromocional" style="font-size: 12px; color: gray;">Profundidad</label>
+                        <input type="number" class="form-control" id="precioPromocional" style="font-size: 14px;"
+                            placeholder="30 cm">
+
+                        <label for="costo" style="font-size: 12px; color: gray;">Ancho</label>
+                        <input type="number" class="form-control" id="costo" style="font-size: 14px;"
+                            placeholder="30 cm">
+
+                        <label for="costo" style="font-size: 12px; color: gray;">Alto</label>
+                        <input type="number" class="form-control" id="costo" style="font-size: 14px;"
+                            placeholder="30 cm">
+                    </div>
+                </div>
+
+                <hr> <!-- Línea divisoria -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Más opciones</h3>
+                        <select class="form-select form-select-sm" multiple aria-label="Multiple select example"
+                            style="height: 50px;">
+                            <option value="1">Este producto tiene envio gratis</option>
+                            <option value="2">Mostrar en la tienda</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
             </div>
         </div>
     </div>
-
+</div>
     <!-- Modal -->
-    <div class="modal fade" id="ordenarProductosModal" tabindex="-1" aria-labelledby="ordenarProductosModalLabel"
-        aria-hidden="true">
+        <div class="modal fade" id="ordenarProductosModal" tabindex="-1" aria-labelledby="ordenarProductosModalLabel"
+            aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
@@ -402,13 +428,11 @@
                 <div class="modal-footer">
                     <!-- Botones de cerrar y guardar -->
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="guardarCambios()">Guardar
+                    <button type="button" class="btn btn-primary">Guardar
                         cambios</button>
                 </div>
             </div>
         </div>
-
-
         <div class="lado" id="ladoDerecho" style="display: none;">
             <h3>Ordenar</h3>
             <div class="dropdown">
@@ -426,9 +450,9 @@
             <div>
                 <div id="container2">
                     <div class="titulo">Productos por sección</div>
-                    <p style="font-size: 15px;">Cambia el orden en que se muestran los productos en la
+                    <p>Cambia el orden en que se muestran los productos en la
                         sección de la tienda</p>
-                    <p style="font-size: 14px;">Ordenar los productos de la sección:</p>
+                    <p>Ordenar los productos de la sección:</p>
                     <div class="dropdown">
                         <div style="display: flex; flex-direction: column;">
                             <div class="dropdown">
@@ -442,7 +466,7 @@
                                     <li><a class="dropdown-item" href="#">Opción 2</a></li>
                                 </ul>
                             </div>
-                            <p style="margin: 10px 0; font-size: 14px;">Ordenado por</p>
+                            <p>Ordenado por</p>
                             <div class="dropdown">
                                 <button class="btn btn-outline-secondary btn-sm dropdown-toggle btn-sm" type="button"
                                     id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -463,28 +487,8 @@
                     cambios</button>
             </div>
         </div>
-
-        <script>
-            tinymce.init({
-                selector: '#editor'
-            });
-        </script>
-        <script>
-            function mostrarLado(lado) {
-                if (lado === 'izquierdo') {
-                    document.getElementById('ladoIzquierdo').style.display = 'block';
-                    document.getElementById('ladoDerecho').style.display = 'none';
-                } else {
-                    document.getElementById('ladoIzquierdo').style.display = 'none';
-                    document.getElementById('ladoDerecho').style.display = 'block';
-                }
-            }
-
-            function guardarCambios() {
-                // Lógica para guardar los cambios
-                console.log("Cambios guardados");
-            }
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
