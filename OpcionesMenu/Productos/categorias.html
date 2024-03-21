@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
-    <style>
+   
+   <style>
         .categorias {
             width: 90%;
             height: 100%;
             overflow: auto;
-            margin-top: 10px;
+            margin-top: 40px;
             display: flex;
             flex-direction: column;
         }
@@ -33,12 +34,13 @@
         }
 
         .categorias p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
+            margin-top: 30px;
             margin-bottom: 10px;
         }
 
         .sortable-list {
-            width: 90%;
+            width: 100%;
             border-radius: 6px;
             padding: 30px 35px 20px;
             margin: 0 auto;
@@ -55,7 +57,6 @@
             align-items: center;
             justify-content: space-between;
             position: relative;
-            /* Para posicionar el botón */
         }
 
         .item .details {
@@ -101,18 +102,18 @@
     <div class="categorias">
         <div class="contenedor-titulo">
             <h2 class="titulo">Categorias</h2>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarCategoria">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearCategoriaModal">
                 <i class="bi bi-plus-circle"></i> Crear Categoria
             </button>
         </div>
         <div>
-            <p>Para organizar tus productos, creá categorías y subcategorías que aparecerán en el menú de la tienda.</p>
+            <p><strong>Para organizar tus productos, creá categorías y subcategorías que aparecerán en el menú de la tienda.</strong></p>
         </div>
         <ul class="sortable-list">
             <li class="item" draggable="true">
                 <div class="details d-flex justify-content-between align-items-center">
                     <i class="bi bi-grip-vertical" style="margin-right: 10px;"></i>
-                    <span class="span">Item 1</span>
+                    <span class="span">Categoria 1</span>
                 </div>
                 <div class="dropdown col-auto">
                     <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
@@ -121,23 +122,168 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="dropdownMenuButton">
                         <li>
-                            <a class="dropdown-item" href="#" >
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearSubcategoriaModal">
                                 <i class="bi bi-sort-down-alt"></i> Crear subcategoria
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                            data-bs-target="#editar">
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editar">
                                 <i class="bi bi-pencil-square"></i> Editar
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#eliminar">
                                 <i class="bi bi-trash3"></i> Eliminar
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearCategoriaModal">
+                                <i class="bi bi-plus-circle"></i> Crear Categoría
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" draggable="true">
+                <div class="details d-flex justify-content-between align-items-center">
+                    <i class="bi bi-grip-vertical" style="margin-right: 10px;"></i>
+                    <span class="span">Categoria 2</span>
+                </div>
+                <div class="dropdown col-auto">
+                    <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearSubcategoriaModal">
+                                <i class="bi bi-sort-down-alt"></i> Crear subcategoria
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editar">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                <i class="bi bi-trash3"></i> Eliminar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearCategoriaModal">
+                                <i class="bi bi-plus-circle"></i> Crear Categoría
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" draggable="true">
+                <div class="details d-flex justify-content-between align-items-center">
+                    <i class="bi bi-grip-vertical" style="margin-right: 10px;"></i>
+                    <span class="span">Categoria 3</span>
+                </div>
+                <div class="dropdown col-auto">
+                    <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearSubcategoriaModal">
+                                <i class="bi bi-sort-down-alt"></i> Crear subcategoria
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editar">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                <i class="bi bi-trash3"></i> Eliminar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearCategoriaModal">
+                                <i class="bi bi-plus-circle"></i> Crear Categoría
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" draggable="true">
+                <div class="details d-flex justify-content-between align-items-center">
+                    <i class="bi bi-grip-vertical" style="margin-right: 10px;"></i>
+                    <span class="span">Categoria 4</span>
+                </div>
+                <div class="dropdown col-auto">
+                    <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearSubcategoriaModal">
+                                <i class="bi bi-sort-down-alt"></i> Crear subcategoria
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editar">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                <i class="bi bi-trash3"></i> Eliminar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearCategoriaModal">
+                                <i class="bi bi-plus-circle"></i> Crear Categoría
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item" draggable="true">
+                <div class="details d-flex justify-content-between align-items-center">
+                    <i class="bi bi-grip-vertical" style="margin-right: 10px;"></i>
+                    <span class="span">Categoria 5</span>
+                </div>
+                <div class="dropdown col-auto">
+                    <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-bottom" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearSubcategoriaModal">
+                                <i class="bi bi-sort-down-alt"></i> Crear subcategoria
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editar">
+                                <i class="bi bi-pencil-square"></i> Editar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                <i class="bi bi-trash3"></i> Eliminar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#crearCategoriaModal">
                                 <i class="bi bi-plus-circle"></i> Crear Categoría
                             </a>
                         </li>
@@ -147,8 +293,7 @@
         </ul>
 
         <!-- Modal "Crear Subcategoria" -->
-        <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="editarModal"
-            aria-hidden="true">
+        <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="editarModal" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header bg-primary text-white">
@@ -160,8 +305,7 @@
                         <!-- Contenido del modal para crear subcategoría -->
                         <div class="mb-3">
                             <label for="nombreSubcategoria" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombreSubcategoria"
-                                placeholder="Nombre">
+                            <input type="text" class="form-control" id="nombreSubcategoria" placeholder="Nombre">
                         </div>
                         <div class="mb-3">
                             <label for="descripcionSubcategoria" class="form-label">Descripción
@@ -198,14 +342,81 @@
                             <label for="urlSubcategoria" class="form-label">URL </label>
                             <div class="input-group">
                                 <span class="input-group-text">...itiendanube.com/</span>
-                                <input type="text" class="form-control" id="urlSubcategoria"
-                                    placeholder="nombre">
+                                <input type="text" class="form-control" id="urlSubcategoria" placeholder="nombre">
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal "Crear Categoría" -->
+        <div class="modal fade" id="crearCategoriaModal" tabindex="-1" aria-labelledby="crearCategoriaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crearCategoriaModalLabel">Crear categoría</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nombreCategoria" class="form-label">Nombre de la categoría</label>
+                            <input type="text" class="form-control" id="nombreCategoria"
+                                placeholder="Nombre de la categoría">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal "Crear Subcategoría" -->
+        <div class="modal fade" id="crearSubcategoriaModal" tabindex="-1" aria-labelledby="crearSubcategoriaModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="crearSubcategoriaModalLabel">Crear subcategoría</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nombreSubcategoria" class="form-label">Nombre de la subcategoría</label>
+                            <input type="text" class="form-control" id="nombreSubcategoria"
+                                placeholder="Nombre de la subcategoría">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Eliminar -->
+        <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Querés eliminar esta categoría?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> Al hacerlo, vas a perder todas las subcategorías asociadas a ella y no podrás recuperarlas.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
                     </div>
                 </div>
             </div>

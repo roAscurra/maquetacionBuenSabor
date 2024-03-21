@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,15 @@
     <!-- <link rel="stylesheet" href="OpcionesMenu/Productos/listaProductos.css"> -->
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
-        .cupones{
+        .cupones {
             margin-top: 2%;
         }
-        .table{
+
+        .table {
             margin-top: 5%;
         }
-        .search-container{
+
+        .search-container {
             margin-top: 2%;
         }
     </style>
@@ -34,14 +36,16 @@
                         <h1 class="titulo text-start">Productos</h1>
                     </div>
                     <div class="dropdown col-auto">
-                        <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle" type="button"
-                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn-outline-secondary btn-sm text-end rounded-pill dropdown-toggle"
+                            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             Más opciones
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li>
-                                <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ordenarProductosModal">
-                                    <i class="bi bi-sort-down-alt"></i> Organizar productos <!-- Agregamos el icono aquí -->
+                                <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#ordenarProductosModal">
+                                    <i class="bi bi-sort-down-alt"></i> Organizar productos
+                                    <!-- Agregamos el icono aquí -->
                                 </a>
                             </li>
                             <li>
@@ -60,9 +64,9 @@
                     <div class="search-container input-group">
                         <span class="input-group-text"><i class="bi bi-search"></i></span>
                         <input type="text" class="form-control" placeholder="Buscar...">
-                    </div>  
+                    </div>
                 </div>
-        
+
                 <table class="table" style="border-collapse: collapse;">
                     <tbody>
                         <tr>
@@ -83,34 +87,34 @@
                                 <input type="number" class="form-control" id="precioVenta"
                                     style="font-size: 14px; width: 60px;border: 1px solid black;  " placeholder="5">
                             </td>
-            
+
                             <td style="text-align: center; vertical-align: middle;">
                                 <input type="number" class="form-control" id="precioVenta"
                                     style="text-decoration: line-through;font-size: 14px; width: 80px;border: 1px solid black; "
                                     placeholder="$5000">
                             </td>
-            
+
                             <td style="text-align: center; vertical-align: middle;">
                                 <input type="number" class="form-control" id="precioVenta"
                                     style=" font-size: 14px; width: 80px;border: 1px solid black;" placeholder="$1000">
                             </td>
-            
+
                             <td style="vertical-align: middle;text-align: center">
                                 <div class="btn-group">
-                                    <button class="btn btn-outline-dark border-0" title="Compartir" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" onclick="showToast()">
+                                    <button class="btn btn-outline-dark border-0" title="Compartir"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" onclick="showToast()">
                                         <i class="bi bi-share"></i>
                                     </button>
                                     <!-- Cuadro de mensaje -->
                                     <div class="toast-container" id="toastContainer"
                                         style="position: fixed; top: 20px; right: 20px;">
-                                        <div class="toast" id="toastMessage" role="alert" aria-live="assertive" aria-atomic="true"
-                                            data-bs-autohide="false">
+                                        <div class="toast" id="toastMessage" role="alert" aria-live="assertive"
+                                            aria-atomic="true" data-bs-autohide="false">
                                             <div class="toast-header">
-                                                <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="toast"
-                                                    aria-label="Close"></button>
+                                                <button type="button" class="bi bi-x-circle border-0"
+                                                    data-bs-dismiss="toast" aria-label="Close"></button>
                                             </div>
-            
+
                                             <div class="toast-body">
                                                 Link copiado
                                             </div>
@@ -120,23 +124,23 @@
                                             </div>
                                         </div>
                                     </div>
-            
-            
-                                    <button class="btn btn-outline-dark border-0" title="Duplicar" data-bs-toggle="tooltip"
-                                        data-bs-placement="top" onclick="showToast()">
+
+
+                                    <button class="btn btn-outline-dark border-0" title="Duplicar"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" onclick="showToast()">
                                         <i class="bi bi-files"></i>
                                     </button>
-                                    
+
                                     <!-- Cuadro de mensaje -->
-                                    
-            
-                                    <button class="btn btn-outline-dark border-0" title="Eliminar" data-bs-toggle="modal"
-                                        data-bs-target="#confirmationModal">
+
+
+                                    <button class="btn btn-outline-dark border-0" title="Eliminar"
+                                        data-bs-toggle="modal" data-bs-target="#confirmationModal">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </div>
                             </td>
-            
+
                         </tr>
                     </tbody>
                 </table>
@@ -153,7 +157,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
                     <button type="button" class="bi bi-x-circle border-0" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     ¿Está seguro de que desea eliminar?
@@ -169,13 +173,14 @@
     <!-- Modal "Agregar producto" -->
     <div class="modal fade" id="agregarProductoModal" tabindex="-1" aria-labelledby="agregarProductoModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog  modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="agregarProductoModalLabel">Agregar producto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    
                     <div class="row">
                         <div class="col">
                             <h3>Nombre y descripción</h3>
@@ -192,6 +197,14 @@
                             </div>
                         </div>
                     </div>
+
+                    <form>
+                        <div class="form-group">
+                            <label for="categoriaInput">Nombre de la categoría:</label>
+                            <input type="text" class="form-control" id="categoriaInput"
+                                placeholder="Escriba el nombre de la categoría">
+                        </div>
+                    </form>
                     <hr> <!-- Línea divisoria -->
                     <div class="row">
                         <div class="col">
@@ -315,7 +328,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
                 </div>
             </div>
         </div>
